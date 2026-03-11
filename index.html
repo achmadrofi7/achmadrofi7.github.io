@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Kartun | Achmad Rofi Maulidan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: #f0f9ff;
+            scroll-behavior: smooth;
+        }
+        h1, h2, h3, .brand {
+            font-family: 'Fredoka One', cursive;
+        }
+        .cartoon-border {
+            border: 4px solid #1e293b;
+            box-shadow: 8px 8px 0px #1e293b;
+        }
+        .cartoon-card {
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 3px solid #1e293b;
+            box-shadow: 6px 6px 0px #1e293b;
+        }
+        .cartoon-card:hover {
+            transform: translate(-4px, -4px);
+            box-shadow: 10px 10px 0px #1e293b;
+        }
+        .blob {
+            position: absolute;
+            z-index: -1;
+            filter: blur(40px);
+            opacity: 0.6;
+        }
+        .nav-link {
+            position: relative;
+            transition: all 0.3s;
+        }
+        .nav-link:hover {
+            color: #f59e0b;
+            transform: scale(1.1) rotate(-2deg);
+        }
+        section {
+            padding: 80px 20px;
+        }
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0% { transform: translate(0, 0px); }
+            50% { transform: translate(0, -15px); }
+            100% { transform: translate(0, 0px); }
+        }
+        .profile-container {
+            width: 280px;
+            height: 280px;
+            background-color: white;
+            border: 4px solid #1e293b;
+            border-radius: 24px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 8px 8px 0px #1e293b;
+        }
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        .text-break-safe {
+            word-break: break-all;
+            overflow-wrap: break-word;
+        }
+    </style>
+</head>
+<body class="text-slate-800">
+
+    <!-- Navigasi -->
+    <nav class="fixed top-0 w-full bg-white border-b-4 border-slate-900 z-50 py-3">
+        <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
+            <div class="brand text-2xl text-blue-600 tracking-wider">ROFI.MAUL</div>
+            <div class="hidden md:flex space-x-6 lg:space-x-8 font-bold">
+                <a href="#home" class="nav-link">Beranda</a>
+                <a href="#tentang" class="nav-link">Tentang</a>
+                <a href="#pendidikan" class="nav-link">Pendidikan</a>
+                <a href="#keahlian" class="nav-link">Keahlian</a>
+                <a href="#kontak" class="nav-link">Kontak</a>
+            </div>
+            <div class="md:hidden text-2xl cursor-pointer">☰</div>
+        </div>
+    </nav>
+
+    <!-- Bagian Home / Beranda -->
+    <section id="home" class="min-h-screen flex flex-col md:flex-row items-center justify-center max-w-6xl mx-auto overflow-hidden">
+        <div class="md:w-1/2 text-center md:text-left space-y-6">
+            <h2 class="text-xl text-orange-500 font-bold tracking-widest uppercase">Halo Semua!</h2>
+            <h1 class="text-5xl md:text-7xl leading-tight">Saya <span class="text-blue-500">Achmad Rofi</span> Maulidan</h1>
+            <p class="text-lg font-medium text-slate-600 max-w-md">Pelajar Teknik Sepeda Motor yang antusias dan kreatif dalam dunia otomotif!</p>
+            <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                <a href="#kontak" class="px-8 py-3 bg-yellow-400 cartoon-card rounded-full font-bold text-lg">Hubungi Saya!</a>
+                <a href="#tentang" class="px-8 py-3 bg-white cartoon-card rounded-full font-bold text-lg">Kenali Saya</a>
+            </div>
+        </div>
+        <div class="md:w-1/2 mt-12 md:mt-0 flex justify-center relative">
+            <div class="blob w-64 h-64 bg-blue-300 rounded-full top-0 left-0"></div>
+            <div class="blob w-64 h-64 bg-yellow-200 rounded-full bottom-0 right-0"></div>
+            <div class="profile-container floating">
+                <img src="https://simangu.smksalirsyad-hgl.sch.id/apimangu/uploads/siswa/232410059/1773112047_1f1f6bce.png" 
+                     alt="Foto Achmad Rofi Maulidan" 
+                     class="profile-img"
+                     onerror="this.src='https://api.dicebear.com/7.x/avataaars/svg?seed=Rofi'">
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian Tentang Diri -->
+    <section id="tentang" class="bg-blue-50">
+        <div class="max-w-4xl mx-auto text-center space-y-8">
+            <h2 class="text-4xl text-slate-900 uppercase">Siapa Itu Rofi?</h2>
+            <div class="bg-white p-8 cartoon-card rounded-2xl relative">
+                <div class="absolute -top-6 -right-4 bg-orange-400 text-white px-4 py-2 rounded-xl cartoon-border rotate-12 font-bold z-10 text-center">
+                    <span class="block text-xs uppercase opacity-80">Lahir 2008</span>
+                    17 Tahun
+                </div>
+                <p class="text-xl leading-relaxed">
+                    Saya adalah seorang pelajar Teknik Sepeda Motor di SMK Al Irsyad Al Islamiyyah Haurgeulis. Saya lahir pada tahun 2008 dan saat ini berusia 17 tahun. Saya memiliki minat yang sangat besar dalam memahami bagaimana mesin bekerja dan selalu ingin belajar hal-hal baru di bidang otomotif serta teknologi digital.
+                </p>
+                <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="p-4 bg-green-100 rounded-xl">
+                        <span class="block font-bold text-2xl">🔧</span>
+                        <span class="font-bold">Tekun</span>
+                    </div>
+                    <div class="p-4 bg-purple-100 rounded-xl">
+                        <span class="block font-bold text-2xl">🛠️</span>
+                        <span class="font-bold">Terampil</span>
+                    </div>
+                    <div class="p-4 bg-red-100 rounded-xl">
+                        <span class="block font-bold text-2xl">⚡</span>
+                        <span class="font-bold">Cekatan</span>
+                    </div>
+                    <div class="p-4 bg-yellow-100 rounded-xl">
+                        <span class="block font-bold text-2xl">🤝</span>
+                        <span class="font-bold">Jujur</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian Pendidikan -->
+    <section id="pendidikan">
+        <div class="max-w-5xl mx-auto px-4">
+            <h2 class="text-4xl text-center mb-12 uppercase tracking-wide">Pendidikan 📚</h2>
+            <div class="space-y-6">
+                <div class="flex flex-col md:flex-row gap-6 items-center bg-white p-6 cartoon-card rounded-2xl">
+                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center text-3xl shrink-0">🏍️</div>
+                    <div class="flex-1 text-center md:text-left">
+                        <h3 class="text-2xl text-blue-600 uppercase">SMK AL IRSYAD AL ISLAMIYYAH HAURGEULIS</h3>
+                        <p class="font-bold text-slate-500 text-lg">Teknik Sepeda Motor | 2023 - 2026</p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row gap-6 items-center bg-white p-6 cartoon-card rounded-2xl">
+                    <div class="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center text-3xl shrink-0">🎒</div>
+                    <div class="flex-1 text-center md:text-left">
+                        <h3 class="text-2xl text-orange-600 uppercase">SMP SAPTA MARGA</h3>
+                        <p class="font-bold text-slate-500 text-lg">2020 - 2023</p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row gap-6 items-center bg-white p-6 cartoon-card rounded-2xl">
+                    <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center text-3xl shrink-0">✏️</div>
+                    <div class="flex-1 text-center md:text-left">
+                        <h3 class="text-2xl text-green-600 uppercase">SD NEGERI 2 LEMAHABANG</h3>
+                        <p class="font-bold text-slate-500 text-lg">2014 - 2020</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian Keahlian -->
+    <section id="keahlian" class="bg-yellow-50">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h2 class="text-4xl mb-12 uppercase tracking-wide">Kekuatan Super ✨</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+                <div class="p-4 md:p-6 bg-white cartoon-card rounded-3xl group overflow-hidden flex flex-col items-center">
+                    <div class="text-4xl md:text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">🔧</div>
+                    <h3 class="font-bold text-sm md:text-xl mb-2 whitespace-normal break-words leading-tight uppercase">Maintenance</h3>
+                    <div class="w-full bg-slate-200 rounded-full h-3 md:h-4 border-2 border-slate-900 mt-auto">
+                        <div class="bg-blue-500 h-full rounded-full shadow-inner" style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="p-4 md:p-6 bg-white cartoon-card rounded-3xl group overflow-hidden flex flex-col items-center">
+                    <div class="text-4xl md:text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">⚙️</div>
+                    <h3 class="font-bold text-sm md:text-xl mb-2 whitespace-normal break-words leading-tight uppercase">Engine Tuning</h3>
+                    <div class="w-full bg-slate-200 rounded-full h-3 md:h-4 border-2 border-slate-900 mt-auto">
+                        <div class="bg-pink-500 h-full rounded-full shadow-inner" style="width: 85%"></div>
+                    </div>
+                </div>
+                <div class="p-4 md:p-6 bg-white cartoon-card rounded-3xl group overflow-hidden flex flex-col items-center">
+                    <div class="text-4xl md:text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">💻</div>
+                    <h3 class="font-bold text-sm md:text-xl mb-2 whitespace-normal break-words leading-tight uppercase">Digital Check</h3>
+                    <div class="w-full bg-slate-200 rounded-full h-3 md:h-4 border-2 border-slate-900 mt-auto">
+                        <div class="bg-green-500 h-full rounded-full shadow-inner" style="width: 75%"></div>
+                    </div>
+                </div>
+                <div class="p-4 md:p-6 bg-white cartoon-card rounded-3xl group overflow-hidden flex flex-col items-center">
+                    <div class="text-4xl md:text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">🎨</div>
+                    <h3 class="font-bold text-sm md:text-xl mb-2 whitespace-normal break-words leading-tight uppercase">Modifikasi</h3>
+                    <div class="w-full bg-slate-200 rounded-full h-3 md:h-4 border-2 border-slate-900 mt-auto">
+                        <div class="bg-purple-500 h-full rounded-full shadow-inner" style="width: 80%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian Kontak -->
+    <section id="kontak" class="bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-4xl text-center mb-12 uppercase tracking-wide">Hubungi Saya 📩</h2>
+            <div class="grid lg:grid-cols-3 gap-8 items-stretch">
+                
+                <div class="space-y-6">
+                    <div class="bg-blue-100 p-6 cartoon-card rounded-2xl h-full flex flex-col">
+                        <h3 class="text-2xl text-blue-700 mb-6 flex items-center gap-2">
+                            <span>📫</span> Alamat & Email
+                        </h3>
+                        <div class="space-y-6 font-bold text-slate-700 flex-grow">
+                            <div>
+                                <p class="text-sm uppercase text-blue-500 mb-1">Lokasi Sekarang:</p>
+                                <p class="text-base md:text-lg flex items-center gap-2">📍 Indramayu, Jawa Barat</p>
+                            </div>
+                            <div>
+                                <p class="text-sm uppercase text-blue-500 mb-1">Email Resmi:</p>
+                                <p class="text-sm md:text-base lg:text-lg text-break-safe flex items-start gap-2">
+                                    <span class="mt-1">📧</span> 
+                                    <span>payrofi150308@gmail.com</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="bg-pink-100 p-6 cartoon-card rounded-2xl h-full flex flex-col">
+                        <h3 class="text-2xl text-pink-700 mb-6 flex items-center gap-2">
+                            <span>🌐</span> Media Sosial
+                        </h3>
+                        <div class="grid grid-cols-1 gap-4 flex-grow">
+                            <a href="https://instagram.com/rofimldn" target="_blank" class="flex items-center gap-4 p-3 bg-white rounded-xl border-2 border-slate-900 hover:bg-pink-50 transition-colors">
+                                <span class="text-2xl">📸</span>
+                                <div class="overflow-hidden">
+                                    <p class="text-xs text-slate-500 font-bold uppercase">Instagram</p>
+                                    <p class="font-bold truncate">@rofimldn</p>
+                                </div>
+                            </a>
+                            <a href="https://wa.me/6285723414182" target="_blank" class="flex items-center gap-4 p-3 bg-white rounded-xl border-2 border-slate-900 hover:bg-green-50 transition-colors">
+                                <span class="text-2xl">💬</span>
+                                <div class="overflow-hidden">
+                                    <p class="text-xs text-slate-500 font-bold uppercase">WhatsApp</p>
+                                    <p class="font-bold truncate">085723414182</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-1">
+                    <form class="bg-green-50 p-8 cartoon-card rounded-3xl space-y-4 h-full" onsubmit="event.preventDefault(); alert('Wush! Pesanmu sudah terkirim ke Rofi!');">
+                        <h3 class="text-2xl text-green-700 mb-2">Kirim Pesan Cepat</h3>
+                        <div>
+                            <label class="block font-bold mb-1 text-sm uppercase">Nama</label>
+                            <input type="text" placeholder="Siapa namamu?" class="w-full p-2 bg-white border-2 border-slate-900 rounded-xl outline-none focus:ring-4 ring-green-300 transition-all font-semibold">
+                        </div>
+                        <div>
+                            <label class="block font-bold mb-1 text-sm uppercase">Pesan Anda</label>
+                            <textarea rows="3" placeholder="Tulis sesuatu..." class="w-full p-2 bg-white border-2 border-slate-900 rounded-xl outline-none focus:ring-4 ring-green-300 transition-all font-semibold"></textarea>
+                        </div>
+                        <button class="w-full py-3 bg-yellow-400 cartoon-border rounded-2xl font-bold text-lg hover:bg-yellow-300 active:scale-95 transition-all mt-2">
+                            KIRIM ROKET! 🚀
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 text-center font-bold text-slate-500 border-t-4 border-slate-100 bg-slate-50">
+        <p>© 2024 Dibuat dengan ❤️ oleh Achmad Rofi Maulidan</p>
+        <p class="text-xs mt-2 uppercase tracking-widest text-slate-400">SMK Al Irsyad Al Islamiyyah Haurgeulis</p>
+    </footer>
+
+</body>
+</html>
+
